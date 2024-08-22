@@ -1,0 +1,162 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4CAF50, #2196F3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #FF5722;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #E64A19;
+    transform: scale(1.05);
+}
+
+/* Game Setup */
+.setup {
+    margin-bottom: 20px;
+}
+
+#player-name {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#game-mode {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.score h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.score p {
+    font-size: 2rem;
+    background: #FFC107;
+    border-radius: 5px;
+    padding: 10px;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* Choices */
+.choices {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.choice {
+    width: 80px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.choice img {
+    width: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+}
+
+.choice:hover {
+    transform: scale(1.2);
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Result */
+.result h2 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+body.dark {
+    background: linear-gradient(135deg, #333, #555);
+}
+
+body.dark .container {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .score p {
+    background: #555;
+    color: #fff;
+}
+
+body.dark button {
+    background-color: #333;
+}
+
+body.dark button:hover {
+    background-color: #111;
+}
